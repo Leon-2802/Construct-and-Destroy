@@ -1,0 +1,102 @@
+{
+    "name": "menuCtrl",
+    "maps": [
+        {
+            "name": "input",
+            "id": "35e409f7-7a3d-46c5-8a38-9f6cb938a482",
+            "actions": [
+                {
+                    "name": "confirm",
+                    "type": "Button",
+                    "id": "c6e0af3a-3b6f-40b3-8d73-8ca261f53b1e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "start",
+                    "type": "Button",
+                    "id": "9850a82c-4a6a-4131-83ef-2a0613034e2b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "down",
+                    "type": "Button",
+                    "id": "8f672887-f3e5-4b80-99e7-8a56c7ada99c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "up",
+                    "type": "Button",
+                    "id": "099e13ce-315a-4351-9757-eb635ba64f68",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e3aab4d9-29d5-4a7b-886b-e42e4e61b83d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "controller1",
+                    "action": "confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cafeadb4-026a-417f-83e4-e54d4e1eed02",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4827740e-0fee-4ab2-89c9-b908c4493a4c",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "controller1",
+                    "action": "down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "261593d8-9161-4404-bdb5-a8929a512bbf",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "controller1",
+                    "action": "up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "controller1",
+            "bindingGroup": "controller1",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

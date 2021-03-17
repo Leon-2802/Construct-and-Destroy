@@ -1,0 +1,197 @@
+{
+    "name": "buildEast",
+    "maps": [
+        {
+            "name": "build",
+            "id": "8a961f93-a32e-4396-9c08-daf4a3c58949",
+            "actions": [
+                {
+                    "name": "moveUp",
+                    "type": "Button",
+                    "id": "648feb97-4f6f-473e-b582-472d4bc7e6e0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "moveDown",
+                    "type": "Button",
+                    "id": "5b06a7e8-293d-4938-93f8-4bd1f097fb53",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "moveLeft",
+                    "type": "Button",
+                    "id": "d1cf78ff-c95f-4e84-89f4-bcc756fd4eaa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "moveRight",
+                    "type": "Button",
+                    "id": "a315eba3-dbc1-48de-bc60-2f3846ea50ce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "switchLeft",
+                    "type": "Button",
+                    "id": "80425c53-d9e6-4da3-aadb-3cb8029291e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "switchRight",
+                    "type": "Button",
+                    "id": "a5d68f43-fa69-4de9-9e87-b595ff092eb0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "plant",
+                    "type": "Button",
+                    "id": "c8e1cb26-0d3c-491c-ba8c-ea1e9e028ef6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "cancel",
+                    "type": "Button",
+                    "id": "7615a557-6405-4b37-9609-6ab8c2f2ab4d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "select",
+                    "type": "Button",
+                    "id": "9bf1199c-dfb7-4fcf-851e-9649b0dc2203",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "75cbb9ab-7334-4ec2-ba17-63a8e57657cb",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "moveUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f68525b0-876e-4897-8f7c-6e0a9c3f1b1e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "moveDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2de5679-a179-45fe-b4df-fca0bfa79310",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "moveLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48ee6003-8a7a-4998-9aca-0388660b6315",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "moveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d8379f4-1457-4f14-b98b-2eb8c8c02b49",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "switchLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "280c4dde-a18a-40cb-b978-0a3ae1fafe4d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "switchRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b39e4a6-d3a3-4dc9-81fe-155d1945b60e",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "plant",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ca1bfd9-fefe-4e56-a546-976c4ce714f1",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "077952e6-501b-4f9e-a539-ec6b51835764",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "keyboard",
+            "bindingGroup": "keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

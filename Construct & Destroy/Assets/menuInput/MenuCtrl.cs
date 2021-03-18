@@ -49,6 +49,46 @@ public class @MenuCtrl : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""back"",
+                    ""type"": ""Button"",
+                    ""id"": ""f0f1c8b2-e1c7-43dd-8a8e-589c2b202a79"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""sliderRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""5a87a24f-bdcf-4155-b0fc-31633eb28b26"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""sliderLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""38382ae4-5531-4eb2-aa1f-6b1a509ec0f0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""switchRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""b582cf0e-8542-437d-a109-47dbb13a6e4a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""switchLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""53658781-e915-4d12-9cd8-bb7d0a6b6222"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -95,6 +135,61 @@ public class @MenuCtrl : IInputActionCollection, IDisposable
                     ""action"": ""up"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8c600a0-1108-487f-9ac3-161a9283bbb3"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c9fb347-0f43-4d13-9c0f-5cdbdc722b10"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""controller1"",
+                    ""action"": ""sliderRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""14db8945-a843-4a08-8c23-7d983aae5216"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""controller1"",
+                    ""action"": ""sliderLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""81fa9a1d-8c3b-445e-a0df-f34f04f11dc9"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""controller1"",
+                    ""action"": ""switchRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c0a7d4c-ab51-4af5-826f-c742b4e42fa2"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""controller1"",
+                    ""action"": ""switchLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -119,6 +214,11 @@ public class @MenuCtrl : IInputActionCollection, IDisposable
         m_input_start = m_input.FindAction("start", throwIfNotFound: true);
         m_input_down = m_input.FindAction("down", throwIfNotFound: true);
         m_input_up = m_input.FindAction("up", throwIfNotFound: true);
+        m_input_back = m_input.FindAction("back", throwIfNotFound: true);
+        m_input_sliderRight = m_input.FindAction("sliderRight", throwIfNotFound: true);
+        m_input_sliderLeft = m_input.FindAction("sliderLeft", throwIfNotFound: true);
+        m_input_switchRight = m_input.FindAction("switchRight", throwIfNotFound: true);
+        m_input_switchLeft = m_input.FindAction("switchLeft", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -172,6 +272,11 @@ public class @MenuCtrl : IInputActionCollection, IDisposable
     private readonly InputAction m_input_start;
     private readonly InputAction m_input_down;
     private readonly InputAction m_input_up;
+    private readonly InputAction m_input_back;
+    private readonly InputAction m_input_sliderRight;
+    private readonly InputAction m_input_sliderLeft;
+    private readonly InputAction m_input_switchRight;
+    private readonly InputAction m_input_switchLeft;
     public struct InputActions
     {
         private @MenuCtrl m_Wrapper;
@@ -180,6 +285,11 @@ public class @MenuCtrl : IInputActionCollection, IDisposable
         public InputAction @start => m_Wrapper.m_input_start;
         public InputAction @down => m_Wrapper.m_input_down;
         public InputAction @up => m_Wrapper.m_input_up;
+        public InputAction @back => m_Wrapper.m_input_back;
+        public InputAction @sliderRight => m_Wrapper.m_input_sliderRight;
+        public InputAction @sliderLeft => m_Wrapper.m_input_sliderLeft;
+        public InputAction @switchRight => m_Wrapper.m_input_switchRight;
+        public InputAction @switchLeft => m_Wrapper.m_input_switchLeft;
         public InputActionMap Get() { return m_Wrapper.m_input; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -201,6 +311,21 @@ public class @MenuCtrl : IInputActionCollection, IDisposable
                 @up.started -= m_Wrapper.m_InputActionsCallbackInterface.OnUp;
                 @up.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnUp;
                 @up.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnUp;
+                @back.started -= m_Wrapper.m_InputActionsCallbackInterface.OnBack;
+                @back.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnBack;
+                @back.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnBack;
+                @sliderRight.started -= m_Wrapper.m_InputActionsCallbackInterface.OnSliderRight;
+                @sliderRight.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnSliderRight;
+                @sliderRight.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnSliderRight;
+                @sliderLeft.started -= m_Wrapper.m_InputActionsCallbackInterface.OnSliderLeft;
+                @sliderLeft.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnSliderLeft;
+                @sliderLeft.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnSliderLeft;
+                @switchRight.started -= m_Wrapper.m_InputActionsCallbackInterface.OnSwitchRight;
+                @switchRight.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnSwitchRight;
+                @switchRight.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnSwitchRight;
+                @switchLeft.started -= m_Wrapper.m_InputActionsCallbackInterface.OnSwitchLeft;
+                @switchLeft.performed -= m_Wrapper.m_InputActionsCallbackInterface.OnSwitchLeft;
+                @switchLeft.canceled -= m_Wrapper.m_InputActionsCallbackInterface.OnSwitchLeft;
             }
             m_Wrapper.m_InputActionsCallbackInterface = instance;
             if (instance != null)
@@ -217,6 +342,21 @@ public class @MenuCtrl : IInputActionCollection, IDisposable
                 @up.started += instance.OnUp;
                 @up.performed += instance.OnUp;
                 @up.canceled += instance.OnUp;
+                @back.started += instance.OnBack;
+                @back.performed += instance.OnBack;
+                @back.canceled += instance.OnBack;
+                @sliderRight.started += instance.OnSliderRight;
+                @sliderRight.performed += instance.OnSliderRight;
+                @sliderRight.canceled += instance.OnSliderRight;
+                @sliderLeft.started += instance.OnSliderLeft;
+                @sliderLeft.performed += instance.OnSliderLeft;
+                @sliderLeft.canceled += instance.OnSliderLeft;
+                @switchRight.started += instance.OnSwitchRight;
+                @switchRight.performed += instance.OnSwitchRight;
+                @switchRight.canceled += instance.OnSwitchRight;
+                @switchLeft.started += instance.OnSwitchLeft;
+                @switchLeft.performed += instance.OnSwitchLeft;
+                @switchLeft.canceled += instance.OnSwitchLeft;
             }
         }
     }
@@ -236,5 +376,10 @@ public class @MenuCtrl : IInputActionCollection, IDisposable
         void OnStart(InputAction.CallbackContext context);
         void OnDown(InputAction.CallbackContext context);
         void OnUp(InputAction.CallbackContext context);
+        void OnBack(InputAction.CallbackContext context);
+        void OnSliderRight(InputAction.CallbackContext context);
+        void OnSliderLeft(InputAction.CallbackContext context);
+        void OnSwitchRight(InputAction.CallbackContext context);
+        void OnSwitchLeft(InputAction.CallbackContext context);
     }
 }

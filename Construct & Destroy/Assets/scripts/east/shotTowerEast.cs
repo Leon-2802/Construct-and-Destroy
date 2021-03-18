@@ -35,7 +35,7 @@ public class shotTowerEast : MonoBehaviour
         targetPos.z += rndZ;
         transform.LookAt(targetPos);
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.2f);
 
         soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.shot);
         GameObject bullet = Instantiate(bulletEastPref, spawnBulletS.position, spawnBulletS.rotation);
@@ -46,7 +46,7 @@ public class shotTowerEast : MonoBehaviour
         Rigidbody bullet2Rb = bullet2.GetComponent<Rigidbody>();
         bullet2Rb.AddForce(spawnBulletN.right * bulletSpeed, ForceMode.Impulse);
         
-        yield return new WaitForSeconds(2.1f);
+        yield return new WaitForSeconds(1.8f);
         selectTarget(); 
     }
 }

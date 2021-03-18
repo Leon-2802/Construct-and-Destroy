@@ -39,7 +39,7 @@ public class rocketTowerWest : MonoBehaviour
         // targetPos.z += rndZ;
         transform.LookAt(targetPos);
 
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.1f);
         StartCoroutine(shootRocket());
     }
 
@@ -47,7 +47,7 @@ public class rocketTowerWest : MonoBehaviour
         GameObject rocket = Instantiate(rocketPrefab, rocketSpawn.position, rocketSpawn.rotation);
         Rigidbody rocketRb = rocket.GetComponent<Rigidbody>();
         rocketRb.AddForce(rocketSpawn.forward * rocketSpeed, ForceMode.Impulse);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(5.5f);
         rocketOk = true;
     }
 

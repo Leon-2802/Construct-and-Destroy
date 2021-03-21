@@ -61,6 +61,6 @@ public class wallEastDamage : MonoBehaviour
         winner.text = "Player 1 has won the Game!";
 
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("battle");
+        SceneManager.LoadScene("startMenu");
     }
 }

@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class menuController : MonoBehaviour
 {
     MenuCtrl inputCtrl;
+
+    public coinSpinning arenaScr;
+    public bool startBattle = false;
 
     public GameObject startMenu, mainMenu, optionsMenu, aboutMenu;
     public GameObject mainMenuFirstBtn, optionsMenuFirstBtn, aboutMenuFirstBtn, optionsBackBtn, aboutBackBtn;
@@ -21,6 +23,7 @@ public class menuController : MonoBehaviour
     private bool sliderMusic = false;
     private bool sliderSFX = false;
     [SerializeField] private GameObject[] aboutMenuBtns = null;
+    [SerializeField] private GameObject[] aboutSection = null;
 
     private int positionCount = 0;
     private int settingsCount = 0;
@@ -81,12 +84,22 @@ public class menuController : MonoBehaviour
         if(aboutMenu.activeInHierarchy && aboutCount >= 0 && aboutCount <= 1) {
             aboutCount++;
             EventSystem.current.SetSelectedGameObject(aboutMenuBtns[aboutCount]);
+            if(aboutCount == 2) {
+                aboutSection[0].SetActive(false);
+                aboutSection[1].SetActive(true);
+            }
+            else {
+                aboutSection[1].SetActive(false);
+                aboutSection[0].SetActive(true);
+            }
         }
     }
     void switchL() {
         if(aboutMenu.activeInHierarchy && aboutCount >= 1 && aboutCount <= 2) {
             aboutCount--;
             EventSystem.current.SetSelectedGameObject(aboutMenuBtns[aboutCount]);
+            aboutSection[1].SetActive(false);
+            aboutSection[0].SetActive(true);
         }
     }
 
@@ -118,7 +131,7 @@ public class menuController : MonoBehaviour
         if(mainMenu.activeInHierarchy) {
             switch(positionCount) {
                 case 0:
-                    SceneManager.LoadScene("battle");
+                    startBattle = true;
                     break;
                 case 1:
                     mainMenu.SetActive(false);
@@ -192,6 +205,10 @@ public class menuController : MonoBehaviour
             sliders[1].value -= 0.1f;
         }
     }
+
+    // private IEnumerator loadBattle() {
+    //     arenaScr.spinSpeed
+    // }
     
     private void OnEnable() {
         inputCtrl.Enable();

@@ -83,19 +83,19 @@ public class towerDamage : MonoBehaviour
                         break;
                         case "money":
                         phaseManager.moneyTowerWest.Remove(this.gameObject);
-                        for(int index = 0; index < 3; index++) {
+                        for(int index = 0; index < 2; index++) {
                             Instantiate(coinWest, moneySpawn[index].position, transform.rotation);
                         }
                         break;
                     case "rocket":
                         phaseManager.rocketTowerWest.Remove(this.gameObject);
-                        for(int index = 0; index < 3; index++) {
+                        for(int index = 0; index < 2; index++) {
                             Instantiate(coinWest, moneySpawn[index].position, transform.rotation);
                         }
                         break;
                     case "ice":
                         phaseManager.iceTowerWest.Remove(this.gameObject);
-                        for(int index = 0; index < 3; index++) {
+                        for(int index = 0; index < 2; index++) {
                             Instantiate(coinWest, moneySpawn[index].position, transform.rotation);
                         }
                         break;
@@ -114,20 +114,20 @@ public class towerDamage : MonoBehaviour
                         Instantiate(coinEast, transform.position, transform.rotation);
                         break;
                     case "money":
-                        for(int index = 0; index < 3; index++) {
-                            phaseManager.moneyTowerEast.Remove(this.gameObject);
+                        phaseManager.moneyTowerEast.Remove(this.gameObject);
+                        for(int index = 0; index < 2; index++) {
                             Instantiate(coinEast, moneySpawn[index].position, transform.rotation);
                         }
                         break;
                     case "rocket":
                         phaseManager.rocketTowerEast.Remove(this.gameObject);
-                        for(int i = 0; i < 3; i++) {
+                        for(int i = 0; i < 2; i++) {
                             Instantiate(coinEast, moneySpawn[i].position, transform.rotation);
                         }
                         break;
                     case "ice":
                         phaseManager.iceTowerEast.Remove(this.gameObject);
-                        for(int i = 0; i < 3; i++) {
+                        for(int i = 0; i < 2; i++) {
                             Instantiate(coinEast, moneySpawn[i].position, transform.rotation);
                         }
                         break;

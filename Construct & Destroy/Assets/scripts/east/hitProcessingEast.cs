@@ -70,7 +70,7 @@ public class hitProcessingEast : MonoBehaviour
     }
     private void ded() {
         Instantiate(explosion, transform.position, transform.rotation);
-        for(int i = 0; i < 5; i++) {
+        for(int i = 0; i < 3; i++) {
             Instantiate(coin, coinSpawns[i].position, coinSpawns[i].rotation);
         }
         StopAllCoroutines();

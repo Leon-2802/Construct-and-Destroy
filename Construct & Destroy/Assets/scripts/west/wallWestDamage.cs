@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class wallWestDamage : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class wallWestDamage : MonoBehaviour
     [SerializeField] private Material[] colors = null;
     [SerializeField] private GameObject fightCanvas = null;
     [SerializeField] private GameObject winnerCanvas = null;
-    [SerializeField] private Text winner = null;
+    [SerializeField] private TMP_Text winner = null;
     void Start()
     {
         health.SetMaxHealth(wallHealth);

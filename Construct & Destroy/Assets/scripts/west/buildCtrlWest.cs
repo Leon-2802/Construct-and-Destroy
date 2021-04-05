@@ -74,25 +74,37 @@ public class buildCtrlWest : MonoBehaviour
     }
 
     void moveUp() {
-        if(tower != null) {
+        if(tower.transform.position.z >= 5) {
+            return;
+        }
+        else if(tower != null) {
             soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
             tower.transform.Translate(Vector3.forward);
         }
     }
     void moveDown() {
-        if(tower != null) {
+        if(tower.transform.position.z <= -4) {
+            return;
+        }
+        else if(tower != null) {
             soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
             tower.transform.Translate(Vector3.back);
         }
     }
     void moveLeft() {
-        if(tower != null) {
+        if(tower.transform.position.x <= -10) {
+            return;
+        }
+        else if(tower != null) {
             soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
             tower.transform.Translate(Vector3.left);
         }
     }
     void moveRight() {
-        if(tower != null) {
+        if(tower.transform.position.x >= -1) {
+            return;
+        }
+        else if(tower != null) {
             soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
             tower.transform.Translate(Vector3.right);
         }

@@ -2404,8 +2404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  zoomSpeed: 15
+  zoomTime: 1
   center: {fileID: 340981986}
-  check: {fileID: 651768295}
   menuController: {fileID: 610538458}
 --- !u!82 &121636025
 AudioSource:
@@ -27582,9 +27583,6 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: 39338110d1421e148bc1480b1d1e5cdd, type: 2}
   - {fileID: 2100000, guid: 99debaf96fd413949b7afaf42ecc8aa6, type: 2}
-  fightCanvas: {fileID: 0}
-  winnerCanvas: {fileID: 0}
-  winner: {fileID: 0}
 --- !u!54 &1653540062
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34095,9 +34093,6 @@ MonoBehaviour:
   colors:
   - {fileID: 2100000, guid: 6259cd3addcc0934d94652869e212e2b, type: 2}
   - {fileID: 2100000, guid: 99debaf96fd413949b7afaf42ecc8aa6, type: 2}
-  fightCanvas: {fileID: 0}
-  winnerCanvas: {fileID: 0}
-  winner: {fileID: 0}
 --- !u!54 &2081421980
 Rigidbody:
   m_ObjectHideFlags: 0

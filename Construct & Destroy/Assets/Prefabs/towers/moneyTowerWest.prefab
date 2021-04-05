@@ -725,8 +725,8 @@ MonoBehaviour:
     type: 3}
   coinEast: {fileID: 437415280667316093, guid: 8aec994217aa02e4bbb2209115264665, type: 3}
   moneySpawn:
-  - {fileID: 3563712336332906180}
-  - {fileID: 3563712336866653037}
+  - {fileID: 3563712336719548577}
+  - {fileID: 3563712336109668065}
   - {fileID: 3563712336719548577}
 --- !u!114 &3563712337995924880
 MonoBehaviour:

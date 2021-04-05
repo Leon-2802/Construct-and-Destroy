@@ -17,7 +17,6 @@ public class menuController : MonoBehaviour
 
     [SerializeField] private GameObject[] mainMenuBtns = null;
     [SerializeField] private GameObject[] settingsMenuBtns = null;
-    [SerializeField] private GameObject[] settings = null;
     [SerializeField] private Slider[] sliders = null;
     private bool inSettings = false;
     private bool sliderMusic = false;
@@ -67,6 +66,20 @@ public class menuController : MonoBehaviour
         else if(optionsMenu.activeInHierarchy && settingsCount >= 0 && settingsCount <= 2) {
             settingsCount++;
             EventSystem.current.SetSelectedGameObject(settingsMenuBtns[settingsCount]);
+            switch(settingsCount) {
+                case 0:
+                    sliderMusic = false;
+                    sliderSFX = false;
+                    break;
+                case 1:
+                    sliderMusic = true;
+                    sliderSFX = false;
+                    break;
+                case 2:
+                    sliderMusic = false;
+                    sliderSFX = true;
+                    break;
+            }
         }
     }
     void moveUp() 
@@ -78,6 +91,20 @@ public class menuController : MonoBehaviour
         else if(optionsMenu.activeInHierarchy && settingsCount <= 3 && settingsCount >= 1) {
             settingsCount--;
             EventSystem.current.SetSelectedGameObject(settingsMenuBtns[settingsCount]);
+            switch(settingsCount) {
+                case 0:
+                    sliderMusic = false;
+                    sliderSFX = false;
+                    break;
+                case 1:
+                    sliderMusic = true;
+                    sliderSFX = false;
+                    break;
+                case 2:
+                    sliderMusic = false;
+                    sliderSFX = true;
+                    break;
+            }
         }
     }
     void switchR() {
@@ -153,21 +180,6 @@ public class menuController : MonoBehaviour
         else if(optionsMenu.activeInHierarchy) {
             inSettings = true;
             switch(settingsCount) {
-                case 0:
-                    EventSystem.current.SetSelectedGameObject(settings[settingsCount]);
-                    sliderMusic = false;
-                    sliderSFX = false;
-                    break;
-                case 1:
-                    EventSystem.current.SetSelectedGameObject(settings[settingsCount]);
-                    sliderSFX = false;
-                    sliderMusic = true;
-                    break;
-                case 2:
-                    EventSystem.current.SetSelectedGameObject(settings[settingsCount]);
-                    sliderMusic = false;
-                    sliderSFX = true;
-                    break;
                 case 3:
                     inSettings = false;
                     sliderMusic = false;

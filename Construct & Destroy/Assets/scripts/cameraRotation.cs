@@ -6,24 +6,40 @@ using UnityEngine.SceneManagement;
 public class cameraRotation : MonoBehaviour
 {
     [SerializeField] private float speed = 0;
+    [SerializeField] private float zoomSpeed = 15f;
+    [SerializeField] private float zoomTime = 3f;
     [SerializeField] private Transform center = null;
-    [SerializeField] private Transform check = null;
     public menuController menuController;
-    private float angle;
+    private bool rotated = false;
     void Update()
     {
         transform.RotateAround(center.position, center.up, Time.deltaTime * speed);
 
         if(menuController.startBattle == true) {
-            SceneManager.LoadScene("battle");
+            speed = 0f;
+            
+            if(rotated == false) {
+               rotateBack();
+            }
 
-            Vector3 angleVector = check.position - transform.position;
-            angle = Vector3.Angle(transform.forward, angleVector);
-            // Debug.Log(angle);
+            transform.Translate(Vector3.forward * zoomSpeed * Time.deltaTime);
+            zoomTime -= Time.deltaTime;
 
-            if(angle >= -0.5f && angle <= 0.5f) {
-                speed = 0f;
+            if(zoomTime <= 0) {
+                zoomSpeed = 0f;
+                SceneManager.LoadScene("battle");
             }
         }
+    }
+
+    void rotateBack() {
+        rotated = true;
+        //zu kamera rotieren:
+        transform.position = new Vector3(-0.25f, 10.39f, -24.69f);
+        Vector3 actualRot = transform.rotation.eulerAngles;
+        actualRot.x = 17.998f;
+        actualRot.y = 0;
+        actualRot.z = 0;
+        transform.rotation = Quaternion.Euler(actualRot);
     }
 }

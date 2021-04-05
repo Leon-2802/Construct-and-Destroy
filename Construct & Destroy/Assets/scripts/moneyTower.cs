@@ -14,7 +14,7 @@ public class moneyTower : MonoBehaviour
     private IEnumerator moneyInt()
     {
         yield return new WaitForSeconds(4f);
-        for(int i = 0; i < 4; i++) {
+        for(int i = 0; i < 2; i++) {
             Instantiate(coin, moneySpawns[i].position, moneySpawns[i].rotation);
         }
         yield return new WaitForSeconds(14f);

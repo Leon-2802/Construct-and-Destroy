@@ -12,9 +12,9 @@ public class wallWestDamage : MonoBehaviour
     public int currentHealth;
     [SerializeField] private MeshRenderer mesh = null;
     [SerializeField] private Material[] colors = null;
-    [SerializeField] private GameObject fightCanvas = null;
-    [SerializeField] private GameObject winnerCanvas = null;
-    [SerializeField] private TMP_Text winner = null;
+    // [SerializeField] private GameObject fightCanvas = null;
+    // [SerializeField] private GameObject winnerCanvas = null;
+    // [SerializeField] private TMP_Text winner = null;
     void Start()
     {
         health.SetMaxHealth(wallHealth);
@@ -38,7 +38,7 @@ public class wallWestDamage : MonoBehaviour
         health.SetHealth(currentHealth);
         mesh.material = colors[1];
         if(currentHealth <= 0) {
-            StartCoroutine(reload());
+            return;
         } else {
             StartCoroutine(normal());
         }
@@ -53,17 +53,17 @@ public class wallWestDamage : MonoBehaviour
         mesh.material = colors[0];
     }
 
-    private IEnumerator reload() {
+    // private IEnumerator reload() {
 
-        yield return new WaitForSeconds(0.5f);
-        Time.timeScale = 0f;
-        fightCanvas.SetActive(false);
-        winnerCanvas.SetActive(true);
-        winner.text = "Player 2 has won the Game!";
+    //     yield return new WaitForSeconds(0.5f);
+    //     Time.timeScale = 0f;
+    //     fightCanvas.SetActive(false);
+    //     winnerCanvas.SetActive(true);
+    //     winner.text = "Player 2 has won the Game!";
 
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("battle");
-    }
+    //     yield return new WaitForSeconds(3f);
+    //     SceneManager.LoadScene("battle");
+    // }
 }
 
     

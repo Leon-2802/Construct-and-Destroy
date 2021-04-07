@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 6008501092463086941}
   - component: {fileID: 278877478921476563}
   - component: {fileID: 687210791641871474}
-  m_Layer: 0
+  - component: {fileID: 8931164403927966934}
+  m_Layer: 11
   m_Name: shotTowerEast
   m_TagString: towerEast
   m_Icon: {fileID: 0}
@@ -166,6 +167,20 @@ MonoBehaviour:
     type: 3}
   coinEast: {fileID: 437415280667316093, guid: 8aec994217aa02e4bbb2209115264665, type: 3}
   moneySpawn: []
+--- !u!136 &8931164403927966934
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5466118426421034326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &5466118426977742526
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5466118426977742527}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: spawnBulletS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5466118427408529184}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: spawnBulletN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +253,7 @@ GameObject:
   - component: {fileID: 5466118427408550921}
   - component: {fileID: 5466118427408550920}
   - component: {fileID: 5466118427408550923}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: muzzleSouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +347,7 @@ GameObject:
   - component: {fileID: 5466118427903561517}
   - component: {fileID: 5466118427903561516}
   - component: {fileID: 5466118427903561519}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: muzzleNorth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +442,7 @@ GameObject:
   - component: {fileID: 5466118428332577460}
   - component: {fileID: 5466118428332577463}
   - component: {fileID: 1878869676696904987}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,6 +688,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: health-bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4240751829894573417, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4240751829894573418, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}
       propertyPath: m_Value
@@ -702,6 +722,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830044791915, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830693642604, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4240751830693642606, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}

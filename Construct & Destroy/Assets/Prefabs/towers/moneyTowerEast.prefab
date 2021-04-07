@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7231518960505448367}
   - component: {fileID: 7231518960505448366}
   - component: {fileID: 1501105863541200540}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneyTowerEast
   m_TagString: towerEast
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthScr: {fileID: 7231518961591237451}
-  maxHealth: 80
+  maxHealth: 50
   towerManagement: {fileID: 0}
   phaseManager: {fileID: 0}
   explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 7231518960871387003}
   - component: {fileID: 7231518960871387002}
   - component: {fileID: 7231518960871386997}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Canvas '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7231518960989879546}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 7231518961136042803}
   - component: {fileID: 7231518961136042802}
   - component: {fileID: 7231518961136042797}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7231518961320322271}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 7231518961328679230}
   - component: {fileID: 7231518961328679228}
   - component: {fileID: 7231518961328679231}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,7 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7231518961523511635}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 7231518961591237448}
   - component: {fileID: 7231518961591237451}
   - component: {fileID: 7231518961591237454}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: health-bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 7231518961774976133}
   - component: {fileID: 7231518961774976139}
   - component: {fileID: 7231518961774976138}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7231518961913426591}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6149093215633203643}
   - component: {fileID: 3725376081425459758}
   - component: {fileID: 2164948780078453298}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Canvas '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 5080687997813331773}
   - component: {fileID: 4459814807996187940}
   - component: {fileID: 2909996010237632158}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrikadeEast
   m_TagString: coverEast
   m_Icon: {fileID: 0}
@@ -416,6 +416,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: health-bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4240751829894573417, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4240751829894573418, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}
       propertyPath: m_Value
@@ -445,6 +450,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830044791915, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830693642604, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4240751830693642606, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}

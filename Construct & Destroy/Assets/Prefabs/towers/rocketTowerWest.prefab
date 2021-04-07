@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1911387741946477042}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rocketSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1911387742062253564}
   - component: {fileID: 1911387742062253565}
   - component: {fileID: 1911387742062253538}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 1911387742098342558}
   - component: {fileID: 1911387742098342559}
   - component: {fileID: 1911387742098342556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 1911387742650354531}
   - component: {fileID: 1911387742650354528}
   - component: {fileID: 1911387742650354529}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CanvasTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,12 +343,12 @@ GameObject:
   - component: {fileID: 1911387742792679121}
   - component: {fileID: 1911387742792679126}
   - component: {fileID: 1911387742792679127}
-  - component: {fileID: 1911387742792679124}
   - component: {fileID: 1911387742792679125}
   - component: {fileID: 1911387742792679130}
   - component: {fileID: 1911387742792679120}
   - component: {fileID: -3779168673468308725}
-  m_Layer: 0
+  - component: {fileID: 7188257754367456608}
+  m_Layer: 11
   m_Name: rocketTowerWest
   m_TagString: towerWest
   m_Icon: {fileID: 0}
@@ -421,20 +421,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1911387742792679124
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911387742792679131}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.4900955
-  m_Height: 6.5346065
-  m_Direction: 1
-  m_Center: {x: -0.002598554, y: 0.23211002, z: -0.02491188}
 --- !u!54 &1911387742792679125
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -515,6 +501,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yPos: 0.65
+--- !u!135 &7188257754367456608
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911387742792679131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.43178058
+  m_Center: {x: 0.008323491, y: 0.99099636, z: -0.00000011920929}
 --- !u!114 &1911387742766801237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6701362845538186008}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046692496259525081}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,6 +719,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: health-bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4240751829894573417, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4240751829894573418, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}
       propertyPath: m_Value
@@ -749,6 +753,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830044791915, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830693642604, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4240751830693642606, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}

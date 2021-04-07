@@ -38,15 +38,16 @@ public class shotTowerWest : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
     
         soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.shot);
-        GameObject bullet = Instantiate(bulletWestPref, spawnBulletS.position, spawnBulletS.rotation);
-        Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-        bulletRb.AddForce(spawnBulletS.right * bulletSpeed, ForceMode.Impulse);
-
+        for(int i = 0; i < 2; i++) {
+            GameObject bullet = Instantiate(bulletWestPref, spawnBulletS.position, spawnBulletS.rotation);
+            Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+            bulletRb.AddForce(spawnBulletS.right * bulletSpeed, ForceMode.Impulse);
+        }
         GameObject bullet2 = Instantiate(bulletWestPref, spawnBulletN.position, spawnBulletN.rotation);
         Rigidbody bullet2Rb = bullet2.GetComponent<Rigidbody>();
         bullet2Rb.AddForce(spawnBulletN.right * bulletSpeed, ForceMode.Impulse);
 
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(1f);
         selectTarget();    
     }
 }

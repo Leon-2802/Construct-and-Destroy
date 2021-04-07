@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4981631884546479287}
   - component: {fileID: 4981631884546479286}
   - component: {fileID: 4981631884546479281}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: muzzleSouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4981631884873426689}
   - component: {fileID: 4981631884873426688}
   - component: {fileID: 4981631884873426691}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: muzzleNorth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4981631884959916892}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: spawnBulletN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 4981631885197355319}
   - component: {fileID: 4981631885197355318}
   - component: {fileID: 7377480373100238199}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4981631885462183239}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: spawnBulletS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 3277969837616839306}
   - component: {fileID: 9121092408501190615}
   - component: {fileID: 7618429899856665858}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shotTowerWest
   m_TagString: towerWest
   m_Icon: {fileID: 0}
@@ -673,6 +673,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: health-bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4240751829894573417, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4240751829894573418, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}
       propertyPath: m_Value
@@ -687,6 +692,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830044791915, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830693642604, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4240751830693642606, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7647378846509641257}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2191308777571627015}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: iceSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 2191308778122142219}
   - component: {fileID: 2191308778122142218}
   - component: {fileID: 2191308778122142261}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,8 +164,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.43951112
+  m_Center: {x: 0, y: -0.105855614, z: 0}
 --- !u!1 &2191308778605166801
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,12 +177,12 @@ GameObject:
   - component: {fileID: 2191308778605166635}
   - component: {fileID: 2191308778605166634}
   - component: {fileID: 2191308778605166805}
-  - component: {fileID: 2191308778605166804}
   - component: {fileID: 2191308778605166807}
   - component: {fileID: 2191308778605166806}
   - component: {fileID: 22439881835738251}
   - component: {fileID: -6803502502850619483}
-  m_Layer: 0
+  - component: {fileID: 9091048448817205728}
+  m_Layer: 11
   m_Name: iceTowerWest
   m_TagString: towerWest
   m_Icon: {fileID: 0}
@@ -255,20 +255,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2191308778605166804
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2191308778605166801}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.4872383
-  m_Height: 4.872383
-  m_Direction: 1
-  m_Center: {x: -0.0043055415, y: 0.06380916, z: -0.00000011920929}
 --- !u!54 &2191308778605166807
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -348,6 +334,19 @@ MonoBehaviour:
   - {fileID: 2191308778605166635}
   - {fileID: 7647378846509641257}
   - {fileID: 2862861501322541378}
+--- !u!135 &9091048448817205728
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191308778605166801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4681992
+  m_Center: {x: 0.009840071, y: 0.4640919, z: -0.00000011920929}
 --- !u!1 &5171981003858351545
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +360,7 @@ GameObject:
   - component: {fileID: 958747790116772111}
   - component: {fileID: 298393794572900432}
   - component: {fileID: 4341679151490324745}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Canvas '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2862861501322541378}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,6 +623,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: health-bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4240751829894573417, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4240751829894573418, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}
       propertyPath: m_Value
@@ -653,6 +657,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830044791915, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830693642604, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4240751830693642606, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}

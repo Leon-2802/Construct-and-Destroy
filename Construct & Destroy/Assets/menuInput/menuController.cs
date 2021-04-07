@@ -138,6 +138,8 @@ public class menuController : MonoBehaviour
                 mainMenu.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(optionsBackBtn);
                 positionCount = 1;
+                sliderMusic = false;
+                sliderSFX = false;
             }
             else if(inSettings == true) {
                 EventSystem.current.SetSelectedGameObject(settingsMenuBtns[settingsCount]);
@@ -209,12 +211,18 @@ public class menuController : MonoBehaviour
         } else if(sliderSFX == true && sliders[1].value <= 1) {
             sliders[1].value += 0.1f;
         }
+        else if(aboutMenu.activeInHierarchy) {
+            switchR();
+        }
     }
     void sliderLeft() {
         if(sliderMusic == true && sliders[0].value >= 0) {
             sliders[0].value -= 0.1f;
         } else if(sliderSFX == true && sliders[1].value >= 0) {
             sliders[1].value -= 0.1f;
+        }
+        else if(aboutMenu.activeInHierarchy) {
+            switchL();
         }
     }
 

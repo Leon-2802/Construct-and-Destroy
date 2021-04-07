@@ -9,11 +9,15 @@ public class buildCtrlWest : MonoBehaviour
     BuildWest inputCtrl;
 
     //Tower handling:
+    Vector3 origin;
+    public LayerMask towerLayer;
+    public rangeSpheresWest sphereScr;
     //UI:
     [SerializeField] private Text towerNameWest = null;
     [SerializeField] private Text towerPrizeWest = null;
     [SerializeField] private string[] towerName = null;
     [SerializeField] private string[] towerPrize = null;
+    [SerializeField] private float[] sphereScale = null;
     private int switchCount = 0;
 
     //TowerSpawn:
@@ -58,6 +62,7 @@ public class buildCtrlWest : MonoBehaviour
         selectedTower = Instantiate(towerPrefabs[switchCount], towerWestSpawn.position, Quaternion.identity);
         selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
         tower = selectedTower.transform;
+        sphereScr.spawnSphere(sphereScale[switchCount], tower);
         StartCoroutine(destroyUnplanted());
     }
     public void newRound()
@@ -70,43 +75,72 @@ public class buildCtrlWest : MonoBehaviour
         selectedTower = Instantiate(towerPrefabs[switchCount], towerWestSpawn.position, Quaternion.identity);
         selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
         tower = selectedTower.transform;
+        sphereScr.spawnSphere(sphereScale[switchCount], tower);
         StartCoroutine(destroyUnplanted());
     }
 
     void moveUp() {
-        if(tower.transform.position.z >= 5) {
-            return;
-        }
-        else if(tower != null) {
-            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
-            tower.transform.Translate(Vector3.forward);
+        if(tower != null) {
+            if(tower.transform.position.z >= 5 || switchCount == 1) {
+                return;
+            }
+            else if(tower != null) {
+                origin = tower.position + Vector3.forward;
+                bool blocked = Physics.Linecast(tower.position, origin, towerLayer);
+                if(blocked == true) {
+                    return;
+                }
+                soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
+                tower.transform.Translate(Vector3.forward);
+            }
         }
     }
     void moveDown() {
-        if(tower.transform.position.z <= -4) {
-            return;
-        }
-        else if(tower != null) {
-            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
-            tower.transform.Translate(Vector3.back);
+        if(tower != null) {
+            if(tower.transform.position.z <= -4 || switchCount == 1) {
+                return;
+            }
+            else if(tower != null) {
+                origin = tower.position + Vector3.back;
+                bool blocked = Physics.Linecast(tower.position, origin, towerLayer);
+                if(blocked == true) {
+                    return;
+                }
+                soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
+                tower.transform.Translate(Vector3.back);
+            }
         }
     }
     void moveLeft() {
-        if(tower.transform.position.x <= -10) {
-            return;
-        }
-        else if(tower != null) {
-            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
-            tower.transform.Translate(Vector3.left);
+        if(tower != null) {
+            if(tower.transform.position.x <= -10 || switchCount == 1) {
+                return;
+            }
+            else if(tower != null) {
+                origin = tower.position + Vector3.left;
+                bool blocked = Physics.Linecast(tower.position, origin, towerLayer);
+                if(blocked == true) {
+                    return;
+                }
+                soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
+                tower.transform.Translate(Vector3.left);
+            }
         }
     }
     void moveRight() {
-        if(tower.transform.position.x >= -1) {
-            return;
-        }
-        else if(tower != null) {
-            soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
-            tower.transform.Translate(Vector3.right);
+        if(tower != null) {
+            if(tower.transform.position.x >= -1 || switchCount == 1) {
+                return;
+            }
+            else if(tower != null) {
+                origin = tower.position + Vector3.right;
+                bool blocked = Physics.Linecast(tower.position, origin, towerLayer);
+                if(blocked == true) {
+                    return;
+                }
+                soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerMove);
+                tower.transform.Translate(Vector3.right);
+            }
         }
     }
 
@@ -127,6 +161,10 @@ public class buildCtrlWest : MonoBehaviour
             selectedTower = Instantiate(towerPrefabs[switchCount], towerWestSpawn.position, Quaternion.identity);
             selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
             tower = selectedTower.transform;
+            if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
+                tower = selectedTower.transform;
+                sphereScr.spawnSphere(sphereScale[switchCount], tower);
+            }
         }
         else {
             soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerClick);
@@ -141,6 +179,9 @@ public class buildCtrlWest : MonoBehaviour
             selectedTower = Instantiate(towerPrefabs[switchCount], towerWestSpawn.position, Quaternion.identity);
             selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
             tower = selectedTower.transform;
+            if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
+                sphereScr.spawnSphere(sphereScale[switchCount], tower);
+            }
         }
     }
     void switchRight() 
@@ -160,6 +201,9 @@ public class buildCtrlWest : MonoBehaviour
             selectedTower = Instantiate(towerPrefabs[switchCount], towerWestSpawn.position, Quaternion.identity);
             selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
             tower = selectedTower.transform;
+            if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
+                sphereScr.spawnSphere(sphereScale[switchCount], tower);
+            }
         }
         else {
             soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerClick);
@@ -176,6 +220,9 @@ public class buildCtrlWest : MonoBehaviour
             selectedTower = Instantiate(towerPrefabs[switchCount], towerWestSpawn.position, Quaternion.identity);
             selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
             tower = selectedTower.transform;
+            if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
+                sphereScr.spawnSphere(sphereScale[switchCount], tower);
+            }
         }
     }
     void plant() 
@@ -209,6 +256,7 @@ public class buildCtrlWest : MonoBehaviour
                     selectedTower.GetComponent<towerDamage>().towerManagement = towerManagement;
                     selectedTower.GetComponent<towerDamage>().phaseManager = phaseManager;
                     selectedTower = null;
+                    sphereScr.destroySphere();
                 }
                 break;
             case 1:
@@ -249,6 +297,7 @@ public class buildCtrlWest : MonoBehaviour
                     selectedTower.GetComponent<towerDamage>().towerManagement = towerManagement;
                     selectedTower.GetComponent<towerDamage>().phaseManager = phaseManager;
                     selectedTower = null;
+                    sphereScr.destroySphere();
                 }
                 break;
             case 4:
@@ -264,16 +313,17 @@ public class buildCtrlWest : MonoBehaviour
                     moneyWestNr -= 30;
                     moneyWest.text = moneyWestNr.ToString();
                     selectedTower = null;
+                    sphereScr.destroySphere();
                 }
                 break;
             case 5:
-                if(moneyWestNr >= 10) {
+                if(moneyWestNr >= 5) {
                     soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerPlant);
                     tower = null;
                     selectedTower.GetComponent<MeshRenderer>().material = towerRed;
                     selectedTower.GetComponent<towerDamage>().towerManagement = towerManagement;
                     selectedTower.GetComponent<towerDamage>().phaseManager = phaseManager;
-                    moneyWestNr -= 10;
+                    moneyWestNr -= 5;
                     moneyWest.text = moneyWestNr.ToString();
                     selectedTower = null;
                 }

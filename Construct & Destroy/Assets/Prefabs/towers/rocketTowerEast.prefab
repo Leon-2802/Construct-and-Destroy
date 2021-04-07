@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8752851371293782566}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7430059727319610576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rocketSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,12 +84,12 @@ GameObject:
   - component: {fileID: 7430059727839119847}
   - component: {fileID: 7430059727839119846}
   - component: {fileID: 7430059727839119845}
-  - component: {fileID: 7430059727839119844}
   - component: {fileID: 7430059727839119843}
   - component: {fileID: 7430059727839119842}
   - component: {fileID: 7430059727839119841}
   - component: {fileID: 4233244627446815069}
-  m_Layer: 0
+  - component: {fileID: 5273695036271105006}
+  m_Layer: 11
   m_Name: rocketTowerEast
   m_TagString: towerEast
   m_Icon: {fileID: 0}
@@ -162,20 +162,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &7430059727839119844
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7430059727839119840}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.48533487
-  m_Height: 6.4711313
-  m_Direction: 1
-  m_Center: {x: 0.0025382042, y: 0.2638475, z: -0.02491188}
 --- !u!54 &7430059727839119843
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,6 +242,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yPos: 0.65
+--- !u!135 &5273695036271105006
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430059727839119840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.46750176
+  m_Center: {x: 0.005306363, y: 1.0161666, z: -0.00000011920929}
 --- !u!1 &7430059727940577848
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +267,7 @@ GameObject:
   - component: {fileID: 7430059727940577852}
   - component: {fileID: 7430059727940577851}
   - component: {fileID: 7430059727940577850}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +362,7 @@ GameObject:
   - component: {fileID: 7430059728020109497}
   - component: {fileID: 7430059728020109496}
   - component: {fileID: 7430059728020109495}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CanvasTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +475,7 @@ GameObject:
   - component: {fileID: 7430059728505309533}
   - component: {fileID: 7430059728505309532}
   - component: {fileID: 7430059728505309531}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2226607526168962831}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,6 +719,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: health-bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4240751829894573417, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4240751829894573418, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}
       propertyPath: m_Value
@@ -749,6 +753,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830044791915, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240751830693642604, guid: e93cdeaed08430a4080fbc89c628d094,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4240751830693642606, guid: e93cdeaed08430a4080fbc89c628d094,
         type: 3}

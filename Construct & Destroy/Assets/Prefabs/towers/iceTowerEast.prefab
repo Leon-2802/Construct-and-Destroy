@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6651403763272989303}
   - component: {fileID: 6135235168303987496}
   - component: {fileID: 7872325533789338225}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Canvas '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1910130800417227769}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4619671793739727502}
   - component: {fileID: 4619671793739727488}
   - component: {fileID: 4619671793739727489}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 4619671793922472846}
   - component: {fileID: 6057587698453039926}
   - component: {fileID: 1481699957923278322}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: health-bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 4619671794192930699}
   - component: {fileID: 4619671794192930701}
   - component: {fileID: 4619671794192930698}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,12 +419,12 @@ GameObject:
   - component: {fileID: 5722306884752909139}
   - component: {fileID: 5722306884752909138}
   - component: {fileID: 5722306884752909229}
-  - component: {fileID: 5722306884752909228}
   - component: {fileID: 5722306884752909231}
   - component: {fileID: 5858928605464238067}
   - component: {fileID: 8112595875367711965}
   - component: {fileID: 6962989936393067616}
-  m_Layer: 0
+  - component: {fileID: 1677402274322387278}
+  m_Layer: 11
   m_Name: iceTowerEast
   m_TagString: towerEast
   m_Icon: {fileID: 0}
@@ -497,20 +497,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &5722306884752909228
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5722306884752909225}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.49007982
-  m_Height: 4.9007983
-  m_Direction: 1
-  m_Center: {x: -0.00365597, y: 0.049601495, z: -0.00000011920929}
 --- !u!54 &5722306884752909231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -591,6 +577,19 @@ MonoBehaviour:
   icePrefab: {fileID: 7131327055241917956, guid: fb5ff36b78840cf4f982e600a3cd9251,
     type: 3}
   iceSpeed: 15
+--- !u!135 &1677402274322387278
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722306884752909225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.46451396
+  m_Center: {x: -0.0044389367, y: 0.7596311, z: -0.00000011920929}
 --- !u!1 &5722306884957274447
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +602,7 @@ GameObject:
   - component: {fileID: 5722306884957274483}
   - component: {fileID: 5722306884957274482}
   - component: {fileID: 5722306884957274445}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,8 +681,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.43872145
+  m_Center: {x: 0, y: -0.10723755, z: 0}
 --- !u!1 &5722306885480534910
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5722306885480534911}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: iceSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4014483036764855985}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: moneySpawn3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

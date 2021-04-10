@@ -19660,7 +19660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 551587dc1d605ef4d95489a3a0726c6b, type: 3}
+  - {fileID: 8300000, guid: 51fab5cf8746b814ea0498ad42692e5d, type: 3}
   audioSource: {fileID: 963194229}
 --- !u!4 &874677061
 Transform:
@@ -21691,7 +21691,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0

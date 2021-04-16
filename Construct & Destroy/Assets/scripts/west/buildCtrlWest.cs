@@ -19,6 +19,9 @@ public class buildCtrlWest : MonoBehaviour
     [SerializeField] private string[] towerPrize = null;
     [SerializeField] private float[] sphereScale = null;
     private int switchCount = 0;
+    private int rocketTowerNumber = 0;
+    private int moneyTowerNumber = 0;
+    [SerializeField] private GameObject twoMax = null; 
 
     //TowerSpawn:
     [SerializeField] private Transform towerWestSpawn = null;
@@ -165,6 +168,11 @@ public class buildCtrlWest : MonoBehaviour
                 tower = selectedTower.transform;
                 sphereScr.spawnSphere(sphereScale[switchCount], tower);
             }
+            if (switchCount == 2 || switchCount == 4) {
+                twoMax.SetActive(true);
+            } else {
+                twoMax.SetActive(false);
+            }
         }
         else {
             soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerClick);
@@ -181,6 +189,11 @@ public class buildCtrlWest : MonoBehaviour
             tower = selectedTower.transform;
             if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
                 sphereScr.spawnSphere(sphereScale[switchCount], tower);
+            }
+            if (switchCount == 2 || switchCount == 4) {
+                twoMax.SetActive(true);
+            } else {
+                twoMax.SetActive(false);
             }
         }
     }
@@ -204,6 +217,11 @@ public class buildCtrlWest : MonoBehaviour
             if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
                 sphereScr.spawnSphere(sphereScale[switchCount], tower);
             }
+            if (switchCount == 2 || switchCount == 4) {
+                twoMax.SetActive(true);
+            } else {
+                twoMax.SetActive(false);
+            }
         }
         else {
             soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerClick);
@@ -223,6 +241,11 @@ public class buildCtrlWest : MonoBehaviour
             if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
                 sphereScr.spawnSphere(sphereScale[switchCount], tower);
             }
+            if (switchCount == 2 || switchCount == 4) {
+                twoMax.SetActive(true);
+            } else {
+                twoMax.SetActive(false);
+            }
         }
     }
     void plant() 
@@ -231,6 +254,7 @@ public class buildCtrlWest : MonoBehaviour
             if(switchCount == 1) {
                 switchCount = 1;
             } else {
+                soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 return;
             }
         }
@@ -238,6 +262,7 @@ public class buildCtrlWest : MonoBehaviour
             if(switchCount == 1) {
                 switchCount = 1;
             } else {
+                soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 return;
             }
         }
@@ -257,6 +282,8 @@ public class buildCtrlWest : MonoBehaviour
                     selectedTower.GetComponent<towerDamage>().phaseManager = phaseManager;
                     selectedTower = null;
                     sphereScr.destroySphere();
+                } else {
+                    soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
                 break;
             case 1:
@@ -265,13 +292,16 @@ public class buildCtrlWest : MonoBehaviour
                         soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.healing);
                         moneyWestNr -= 40;
                         moneyWest.text = moneyWestNr.ToString();
-                        wallWest.heal(50);
+                        wallWest.heal(40);
                         cancel();
                     }
+                } else {
+                    soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
                 break;
             case 2:
-                if(moneyWestNr >= 30) {
+                if(moneyWestNr >= 30 && moneyTowerNumber < 2) {
+                    moneyTowerNumber++;
                     soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerPlant);
                     tower = null;
                     towerManagement.targetsEast.Add(selectedTower.transform);
@@ -282,6 +312,8 @@ public class buildCtrlWest : MonoBehaviour
                     selectedTower.GetComponent<towerDamage>().towerManagement = towerManagement;
                     selectedTower.GetComponent<towerDamage>().phaseManager = phaseManager;
                     selectedTower = null;
+                } else {
+                    soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
                 break;
             case 3:
@@ -298,10 +330,13 @@ public class buildCtrlWest : MonoBehaviour
                     selectedTower.GetComponent<towerDamage>().phaseManager = phaseManager;
                     selectedTower = null;
                     sphereScr.destroySphere();
+                } else {
+                    soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
                 break;
             case 4:
-                if(moneyWestNr >= 30) {
+                if(moneyWestNr >= 30 && rocketTowerNumber < 2) {
+                    rocketTowerNumber++;
                     soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.towerPlant);
                     tower = null;
                     towerManagement.targetsEast.Add(selectedTower.transform);
@@ -314,6 +349,8 @@ public class buildCtrlWest : MonoBehaviour
                     moneyWest.text = moneyWestNr.ToString();
                     selectedTower = null;
                     sphereScr.destroySphere();
+                } else {
+                    soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
                 break;
             case 5:
@@ -326,6 +363,8 @@ public class buildCtrlWest : MonoBehaviour
                     moneyWestNr -= 5;
                     moneyWest.text = moneyWestNr.ToString();
                     selectedTower = null;
+                } else {
+                    soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
                 break;
         }

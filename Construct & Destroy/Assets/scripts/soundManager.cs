@@ -8,6 +8,7 @@ public class soundManager : MonoBehaviour
     public AudioClip shot;
     public AudioClip coin;
     public AudioClip energyExplosion;
+    public AudioClip error;
     public AudioClip healing;
     public AudioClip iceHit;
     public AudioClip iceShot;

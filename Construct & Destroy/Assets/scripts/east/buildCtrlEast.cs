@@ -11,7 +11,6 @@ public class buildCtrlEast : MonoBehaviour
     //Tower handling:
     Vector3 origin;
     public LayerMask towerLayer;
-    public rangeSpheres sphereScr;
     //UI:
     [SerializeField] private Text towerNameEast = null;
     [SerializeField] private Text towerPrizeEast = null;
@@ -65,7 +64,6 @@ public class buildCtrlEast : MonoBehaviour
         selectedTower = Instantiate(towerPrefabs[switchCount], towerEastSpawn.position, Quaternion.identity);
         selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
         tower = selectedTower.transform;
-        sphereScr.spawnSphere(sphereScale[switchCount], tower);
         StartCoroutine(destroyUnplanted());
     }
     public void newRound()
@@ -78,7 +76,6 @@ public class buildCtrlEast : MonoBehaviour
         selectedTower = Instantiate(towerPrefabs[switchCount], towerEastSpawn.position, Quaternion.identity);
         selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
         tower = selectedTower.transform;
-        sphereScr.spawnSphere(sphereScale[switchCount], tower);
         StartCoroutine(destroyUnplanted());
     }
 
@@ -165,7 +162,6 @@ public class buildCtrlEast : MonoBehaviour
             selectedTower = Instantiate(towerPrefabs[switchCount], towerEastSpawn.position, Quaternion.identity);
             selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
             if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
-                sphereScr.spawnSphere(sphereScale[switchCount], tower);
             }
             if (switchCount == 2 || switchCount == 4) {
                 twoMax.SetActive(true);
@@ -189,7 +185,6 @@ public class buildCtrlEast : MonoBehaviour
             selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
             tower = selectedTower.transform;
             if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
-                sphereScr.spawnSphere(sphereScale[switchCount], tower);
             }
             if (switchCount == 2 || switchCount == 4) {
                 twoMax.SetActive(true);
@@ -216,7 +211,6 @@ public class buildCtrlEast : MonoBehaviour
             selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
             tower = selectedTower.transform;
             if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
-                sphereScr.spawnSphere(sphereScale[switchCount], tower);
             }
             if (switchCount == 2 || switchCount == 4) {
                 twoMax.SetActive(true);
@@ -240,7 +234,6 @@ public class buildCtrlEast : MonoBehaviour
             selectedTower.GetComponentInChildren<MeshRenderer>().material = towerGrey;
             tower = selectedTower.transform;
             if(switchCount == 0 || switchCount == 3 || switchCount == 4) {
-                sphereScr.spawnSphere(sphereScale[switchCount], tower);
             }
             if (switchCount == 2 || switchCount == 4) {
                 twoMax.SetActive(true);
@@ -282,7 +275,6 @@ public class buildCtrlEast : MonoBehaviour
                     selectedTower.GetComponent<towerDamage>().towerManagement = towerManagement;
                     selectedTower.GetComponent<towerDamage>().phaseManager = phaseManager;
                     selectedTower = null;
-                    sphereScr.destroySphere();
                 } else {
                     soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
@@ -328,7 +320,6 @@ public class buildCtrlEast : MonoBehaviour
                     moneyEastNr -= 35;
                     moneyEast.text = moneyEastNr.ToString();
                     selectedTower = null;
-                    sphereScr.destroySphere();
                 } else {
                     soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
@@ -347,7 +338,6 @@ public class buildCtrlEast : MonoBehaviour
                     moneyEastNr -= 30;
                     moneyEast.text = moneyEastNr.ToString();
                     selectedTower = null;
-                    sphereScr.destroySphere();
                 } else {
                     soundManager.sManagerInstance.Audio.PlayOneShot(soundManager.sManagerInstance.error);
                 }
